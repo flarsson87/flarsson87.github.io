@@ -613,13 +613,13 @@ strong {
 
 .clients-image {
   display: block;
-  max-width: 100px;
+  max-width: 150px;
   margin: auto;
   transition: all ease 0.2s;
 }
 
 .clients-image:hover {
-  transform: scale(1.3);
+  transform: scale(1.5);
 }
 
 
@@ -1185,3 +1185,6 @@ strong {
   }
 }
 
+.float-left-image {
+  float:left
+}

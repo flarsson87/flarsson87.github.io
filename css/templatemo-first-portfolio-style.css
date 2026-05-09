@@ -1273,4 +1273,20 @@ strong {
   .services-thumb {
     margin-bottom: 30px;
   }
+
+  .profile-body p {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-small-title {
+    min-width: auto;
+    border-right: 0;
+    padding: 0 0 6px 0;
+    margin-right: 0;
+  }
+
+  .profile-body a {
+    word-break: break-word;
+  }
 }

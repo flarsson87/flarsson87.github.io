@@ -505,7 +505,7 @@ strong {
 }
 
 .hero-image-wrap {
-  background: var(--white-color);
+  background: var(--primary-color);
   border-radius: 100%;
   width: 350px;
   height: 350px;
@@ -1197,8 +1197,10 @@ strong {
 }
 
 .wizard {
-  align-self: flex-end;
-  transform: translateY(75px);
+  margin-left: 60px;
+  max-width: 75%;
+  /* align-self: flex-right; */
+  /* transform: translateY(75px); */
 }
 
 .float-left-image {

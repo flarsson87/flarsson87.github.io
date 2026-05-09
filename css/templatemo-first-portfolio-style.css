@@ -1274,9 +1274,14 @@ strong {
     margin-bottom: 30px;
   }
 
+  .profile-title {
+    text-align: center;
+  }
+
   .profile-body p {
     display: flex;
     flex-direction: column;
+    text-align: center;
   }
 
   .profile-small-title {
@@ -1284,9 +1289,18 @@ strong {
     border-right: 0;
     padding: 0 0 6px 0;
     margin-right: 0;
+    text-align: center;
   }
 
   .profile-body a {
     word-break: break-word;
+    text-align: center;
+  }
+
+  .custom-btn:hover {
+    background: var(--primary-color);
+  }
+  .custom-btn {
+    background: var(--secondary-color);
   }
 }

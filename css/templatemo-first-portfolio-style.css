@@ -1335,8 +1335,70 @@ strong {
   line-height: 1.7;
 }
 
-/* BACKGROUNDS */
+/* BACKGROUNDS CARDS */
 
 .darktide-card {
   background-image: url("../images/projects/darktide.jpeg");
+}
+
+.magicka2-card {
+  background-image: url("../images/projects/magicka2.jpg");
+  background-position: 45%;
+}
+
+/* ABOUT IMAGE GRID */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.about-grid-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.about-grid-image:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .about-grid-image {
+    height: 160px;
+  }
+  .project-card {
+    min-height: 340px;
+  }
+}
+
+.about-image-one-offset {
+  object-position: 50% 20%;
+}
+
+.about-image-five-offset {
+  object-position: 50% 75%;
+}
+
+.image-top {
+  object-position: top;
+}
+
+.image-bottom {
+  object-position: bottom;
+}
+
+.image-left {
+  object-position: left;
+}
+
+.image-right {
+  object-position: right;
+}
+
+.image-center {
+  object-position: center;
 }

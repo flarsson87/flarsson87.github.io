@@ -1185,6 +1185,22 @@ strong {
   }
 }
 
+.top-row-image {
+  max-height: 600px;
+  width: auto;
+  display: block;
+}
+
+.beast {
+  align-self: flex-end;
+  transform: translateY(150px);
+}
+
+.wizard {
+  align-self: flex-end;
+  transform: translateY(75px);
+}
+
 .float-left-image {
   float:left
 }

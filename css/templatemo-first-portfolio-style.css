@@ -471,13 +471,15 @@ strong {
   background: var(--secondary-color);
   position: relative;
   overflow: hidden;
-  padding-top: 330px;
-  padding-bottom: 330px;
+  padding-top: 140px;
+  padding-bottom: 120px;
 }
 
 @media  screen and (min-width: 991px) {
   .hero {
     height: 60vh;
+    padding-top: 330px;
+    padding-bottom: 330px;
   }
 }
 
@@ -507,8 +509,8 @@ strong {
 .hero-image-wrap {
   background: var(--primary-color);
   border-radius: 100%;
-  width: 350px;
-  height: 350px;
+  width: 220px;
+  height: 220px;
   position: absolute;
   z-index: 22;
   top: -50px;
@@ -516,6 +518,13 @@ strong {
   left: 0;
   margin: auto;
   pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .hero-image-wrap {
+    width: 350px;
+    height: 350px;
+  }
 }
 
 .hero-image {
@@ -1205,4 +1214,63 @@ strong {
 
 .float-left-image {
   float:left
+}
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/* MOBILE FIXES */
+@media (max-width: 768px) {
+
+  .section-padding {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .hero-text {
+    top: 0;
+    text-align: center;
+  }
+
+  .hero-title-wrap {
+    justify-content: center;
+  }
+
+  .hero-image-wrap {
+    position: relative;
+    margin-top: 40px;
+  }
+
+  .about-thumb {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .clients-image {
+    max-width: 100px;
+  }
+
+  .services-thumb {
+    margin-bottom: 30px;
+  }
 }

@@ -1402,3 +1402,153 @@ strong {
 .image-center {
   object-position: center;
 }
+
+/* ========================================
+   PROJECT SHOWCASE LAYOUT
+======================================== */
+
+.project-showcase {
+  position: relative;
+  overflow: hidden;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: #111;
+}
+
+.project-row {
+  min-height: 700px;
+}
+
+.project-row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* ========================================
+   MEDIA SIDE
+======================================== */
+
+.project-media-side {
+  padding: 40px;
+}
+
+.project-media-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.project-gif {
+  width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+  transition: transform 0.35s ease;
+}
+
+.project-gif:hover {
+  transform: scale(1.02);
+}
+
+/* ========================================
+   CONTENT SIDE
+======================================== */
+
+.project-content-side {
+  position: relative;
+  padding: 80px;
+}
+
+.project-content-wrap {
+  max-width: 700px;
+}
+
+.project-role {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff99;
+}
+
+.project-title {
+  font-size: 64px;
+  line-height: 1;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.project-description {
+  font-size: 20px;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 40px;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* ========================================
+   OPTIONAL BACKGROUND KEY ART
+======================================== */
+
+.darktide-showcase {
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.92), rgba(0,0,0,0.7)),
+    url('../images/projects/darktide_keyart.png');
+
+  background-size: cover;
+  background-position: center;
+}
+
+.magicka-showcase {
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.92), rgba(0,0,0,0.7)),
+    url('../images/projects/magicka_keyart.jpg');
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 991px) {
+
+  .project-showcase {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .project-row,
+  .project-row-reverse {
+    flex-direction: column;
+  }
+
+  .project-media-side {
+    padding: 20px;
+  }
+
+  .project-content-side {
+    padding: 40px 25px;
+    text-align: center;
+  }
+
+  .project-title {
+    font-size: 42px;
+  }
+
+  .project-description {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .project-buttons {
+    justify-content: center;
+  }
+
+}

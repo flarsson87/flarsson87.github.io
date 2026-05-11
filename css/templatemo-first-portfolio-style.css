@@ -1088,13 +1088,13 @@ strong {
   }
 
   .hero {
-    padding-top: 200px;
-    padding-bottom: 400px;
+    padding-top: 180px;
+    padding-bottom: 240px;
   }
 
   .hero-text {
     top: 0;
-    margin-bottom: 120px;
+    margin-bottom: 40px;
   }
 
   .about-thumb {

@@ -695,30 +695,19 @@ https://templatemo.com/tm-578-first-portfolio
         </script>
 
         <script>
+            // Load videos directly after page loads
+            window.addEventListener("load", () => {
             const videos = document.querySelectorAll("video");
 
-            const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                const video = entry.target;
+            videos.forEach(video => {
                 const source = video.querySelector("source");
 
-                if (source && source.dataset.src && !source.src) {
-                    source.src = source.dataset.src;
-                    video.load();
-
-                    // Important: explicitly try playing after load
-                    video.play().catch(() => {});
-                }
-
-                observer.unobserve(video);
+                if (source && source.dataset.src) {
+                source.src = source.dataset.src;
+                video.load();
                 }
             });
-            }, {
-                rootMargin: "200px" // starts loading BEFORE videos appear
             });
-
-            videos.forEach(v => observer.observe(v));
         </script>
 
     </body>

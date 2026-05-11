@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Message Sent | Fredrik Larsson</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-family: 'Inter', sans-serif;
+
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.06), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(255,255,255,0.04), transparent 30%),
+        #0c0c0c;
+
+      color: white;
+      overflow: hidden;
+      padding: 24px;
+    }
+
+    .background-grid {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(circle at center, black 20%, transparent 85%);
+      pointer-events: none;
+    }
+
+    .response-card {
+      position: relative;
+
+      width: 100%;
+      max-width: 620px;
+
+      padding: 56px 48px;
+
+      border-radius: 28px;
+
+      background: rgba(255,255,255,0.05);
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.04);
+
+      text-align: center;
+
+      animation: fadeUp 0.7s ease;
+    }
+
+    .success-icon {
+      width: 82px;
+      height: 82px;
+
+      margin: 0 auto 28px;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: rgba(124, 255, 178, 0.12);
+
+      border: 1px solid rgba(124, 255, 178, 0.25);
+
+      font-size: 2rem;
+
+      animation: pulse 2.4s infinite;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 18px;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      opacity: 0.78;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .button-group {
+      margin-top: 38px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-width: 180px;
+
+      padding: 14px 22px;
+
+      border-radius: 14px;
+
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .btn-primary {
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.18);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.08);
+      opacity: 0.8;
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      opacity: 1;
+      border-color: rgba(255,255,255,0.16);
+    }
+
+    .auto-return {
+      margin-top: 28px;
+      font-size: 0.9rem;
+      opacity: 0.5;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.04);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .response-card {
+        padding: 42px 28px;
+        border-radius: 22px;
+      }
+
+      .button-group {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-grid"></div>
+
+  <main class="response-card">
+
+    <div class="success-icon">
+      ✓
+    </div>
+
+    <h1>Message Sent</h1>
+
+    <p>
+      Thanks for reaching out. Your message has been sent successfully and I'll get back to you as soon as possible.
+    </p>
+
+    <div class="button-group">
+      <a href="/" class="btn btn-primary">
+        Back to Portfolio
+      </a>
+
+      <a href="mailto:larsson.fredrik1987@gmail.com" class="btn btn-secondary">
+        Email Directly
+      </a>
+    </div>
+
+    <div class="auto-return">
+      Returning to homepage in 10 seconds...
+    </div>
+
+  </main>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = '/';
+    }, 10000);
+  </script>
+
+</body>
+</html>

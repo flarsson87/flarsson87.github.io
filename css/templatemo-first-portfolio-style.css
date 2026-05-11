@@ -1505,7 +1505,7 @@ strong {
   background-size: cover;
   background-position: center;
 
-  opacity: 0.12;
+  opacity: 0.15;
 
   z-index: -1;
 
@@ -1525,10 +1525,6 @@ strong {
 
 .pillars-bg::before {
   background-image: url("../images/projects/pillars_keyart.jpg");
-}
-
-.stellaris-bg::before {
-  background-image: url("../images/projects/stellaris_keyart.jpg");
 }
 
 /* PROJECT BUTTON FIX */

@@ -1670,4 +1670,5 @@ strong {
   line-height: 1.2;
   color: var(--secondary-color);
   border-color: var(--secondary-color);
+  background: transparent;
 }

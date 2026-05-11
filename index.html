@@ -703,14 +703,19 @@ https://templatemo.com/tm-578-first-portfolio
                 const video = entry.target;
                 const source = video.querySelector("source");
 
-                if (source && source.dataset.src) {
+                if (source && source.dataset.src && !source.src) {
                     source.src = source.dataset.src;
                     video.load();
+
+                    // Important: explicitly try playing after load
+                    video.play().catch(() => {});
                 }
 
                 observer.unobserve(video);
                 }
             });
+            }, {
+                rootMargin: "200px" // starts loading BEFORE videos appear
             });
 
             videos.forEach(v => observer.observe(v));

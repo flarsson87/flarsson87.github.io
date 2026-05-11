@@ -1661,3 +1661,13 @@ strong {
     padding: 60px 16px;
   }
 }
+
+.mini-btn {
+  padding: 8px 16px;
+  font-size: 0.82rem;
+  border-width: 1.5px;
+  border-radius: 12px;
+  line-height: 1.2;
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
